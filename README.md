@@ -17,3 +17,26 @@ cd Password_Analyzer
 ```bash
 pip install requirements.txt
 ```
+
+## Usage
+
+- To check you password's strength :
+```bash
+python cli.py analyze
+```
+
+- To store your password :
+```bash
+python cli.py store
+```
+
+- To retrieve your password :
+```bash
+python cli.py retrieve
+```
+
+- To check how old are your passwords :
+```bash
+python cli.py check-age
+```
+
