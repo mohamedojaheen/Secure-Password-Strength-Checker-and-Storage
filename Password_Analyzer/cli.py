@@ -14,10 +14,48 @@ def generate_password(length=16):
     return password
 
 
+def display_help():
+    """Display detailed help for all available commands."""
+    help_text = """
+    Secure Command-Line Password Strength Analyzer
+
+    Available Commands:
+    -------------------
+    new          - Generate a new password or enter an existing one. Analyze its strength,
+                   get recommendations, and optionally store it securely.
+    analyze      - Analyze the strength of a password, including its length, complexity,
+                   entropy, and whether it has been breached. Provides actionable feedback.
+    retrieve     - Retrieve all stored passwords. Includes the age of each password.
+    check-age    - Check if any stored passwords are older than the specified age (default 90 days).
+
+    Usage Examples:
+    ----------------
+    python cli.py new          # Generate or analyze a password
+    python cli.py analyze      # Analyze a password
+    python cli.py retrieve     # Retrieve stored passwords
+    python cli.py check-age    # Check for outdated passwords
+    """
+    print(help_text)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Secure Command-Line Password Strength Analyzer")
-    parser.add_argument("command", choices=["new", "analyze", "retrieve", "check-age"], help="Choose a command.")
+    parser.add_argument(
+        "command",
+        nargs="?",
+        choices=["new", "analyze", "retrieve", "check-age"],
+        help="Choose a command.",
+    )
+    parser.add_argument(
+        "-help",
+        action="store_true",
+        help="Display detailed help for all available commands."
+    )
     args = parser.parse_args()
+
+    if args.help:
+        display_help()
+        return
 
     if args.command == "new":
         generate = input("Do you want to generate a password? (yes/no): ").strip().lower()
@@ -73,6 +111,8 @@ def main():
 
     elif args.command == "check-age":
         check_password_age()
+    else:
+        print("No command provided. Use -help to see available commands.")
 
 
 if __name__ == "__main__":
