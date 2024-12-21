@@ -1,7 +1,7 @@
 # Secure-Password-Strength-Checker-and-Storage
 ## Overview
 
-This tool provides a secure, command-line interface for password generation, analysis, and storage. It evaluates password strength based on entropy, length, complexity, and common vulnerabilities. Passwords can be securely stored using AES encryption with a master password.
+This tool provides a secure, command-line interface for password generation, analysis, and storage. It evaluates password strength based on entropy, length, complexity, and common vulnerabilities. Passwords can be securely stored using **``AES`` encryption** and **``SHA1`` hash** with a **master password** and a **timeout** mechanism to **prevent brute force attacks** against you master password.
 
 ## Features
 
@@ -32,6 +32,10 @@ This tool provides a secure, command-line interface for password generation, ana
 **5. Password Aging :**
 
   - Alerts when stored passwords exceed a predefined age limit (default: 90 days).
+
+**6. Timeout :**
+
+  - After 3 wrong attempts for entering the msater password you will be timedout (default: 60 seconds).
 
 
 
