@@ -1,10 +1,89 @@
 # Secure-Password-Strength-Checker-and-Storage
 ## Overview
 
-- This tool **_analyzes_** your password to check it's **_strength_** and check its hash in **_a list of famous cracked hashes_**.
-- It also can **_generate_** passwords for you and automatically **_copy them to your clipboard_**.
-- It also **_stores_** your password hashed in **``SHA1``** and encrypted in **``AES``** and retrieves it using a **_master_** password.
-- You can also use it to check **_how old_** are your stored passwords.
+This tool provides a secure, command-line interface for password generation, analysis, and storage. It evaluates password strength based on entropy, length, complexity, and common vulnerabilities. Passwords can be securely stored using AES encryption with a master password.
+
+## Features
+
+**1. Password Analysis :**
+
+  - Checks for length, complexity, common patterns, and inclusion in breached password lists.
+  - Calculates an entropy score to quantify password strength.
+  - Provides actionable recommendations for weak passwords.
+
+
+**2. Password Generation :**
+
+  - Generates strong random passwords.
+  - Automatically copies generated passwords to the clipboard.
+
+
+**3. Password Storage :**
+
+  - Stores passwords securely using **``AES``** encryption and **``SHA1``** hash.
+  - Requires a master password for encryption/decryption.
+
+
+**4. Password Retrieval :**
+
+  - Retrieves stored passwords with their ages.
+
+
+**5. Password Aging :**
+
+  - Alerts when stored passwords exceed a predefined age limit (default: 90 days).
+
+
+
+## Commands
+
+**1. ``new``**
+  - Combines password generation, analysis, and optional storage.
+  - Flow :
+    1. Ask if the user wants to generate a new password.
+    2. If generating :
+      - Generate a strong random password.
+      - Display and copy it to the clipboard.
+      - Prompt to store the password.
+    3. If not generating :
+      - Accept a user-provided password.
+      - Analyze the password for strength and display recommendations.
+      - Ask "Are you sure?" for weak passwords.
+      - Prompt to store the password.
+
+**2. ``analyze``**
+  - Analyzes a provided password.
+  - Displays:
+    - Length, complexity, and pattern checks.
+    - Breach status.
+    - Entropy score.
+    - Recommendations for improvement.
+
+**3. ``retrieve``**
+  - Retrieves stored passwords.
+  - Displays:
+    - Decrypted passwords.
+    - Age of each password in days.
+
+**4. ``check-age``**
+  - Checks the age of stored passwords.
+  - Alerts if any password is older than the predefined maximum age (default: 90 days).
+
+
+## Password Strength Criteria
+
+**Length :**
+  - Minimum 12 characters.
+
+**Complexity :**
+  - Mix of uppercase, lowercase, numbers, and special characters.
+
+**Common Patterns :**
+  - Avoid predictable sequences like "123456" or "password".
+
+**Entropy :**
+  - Higher entropy indicates better resilience against brute-force attacks.
+  - Entropy < 50 is considered weak.
 
 ## Installation
 
