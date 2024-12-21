@@ -23,7 +23,7 @@ pip install requirements.txt
 
 - For help command use **``-help``** :
 ```bash
-python cli.py check-age
+python cli.py -help
 ```
 
 - To check you password's strength use **``analyze``** :
