@@ -45,5 +45,7 @@ python cli.py retrieve
 ```bash
 python cli.py check-age
 ```
+
+
 > [!CAUTION]
 > This code is provided as is. Use it at your own risk.
