@@ -2,7 +2,8 @@
 ## Overview
 
 - This tool **_analyzes_** your password to check it's **_strength_** and check its hash in **_a list of famous cracked hashes_**.
-- It also **_stores_** your password hashed in **``SHA1``** and retrieves it using a **_master_** password.
+- It also can **_generate_** passwords for you and automatically **_copy them to your clipboard_**.
+- It also **_stores_** your password hashed in **``SHA1``** and encrypted in **``AES``** and retrieves it using a **_master_** password.
 - You can also use it to check **_how old_** are your stored passwords.
 
 ## Installation
