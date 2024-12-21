@@ -97,7 +97,7 @@ This tool provides a secure, command-line interface for password generation, ana
   - The master password is hashed with **``SHA1``** to generate the encryption key.
 
 **2. Prevention against brute force attacks :**
-  - After **3** wrong attempts at entering the master password for the previously stored passwords, a timeout will trigger that prevents you from entering the master passwword (default duration: 60 seconds).  
+  - After **3** wrong attempts at entering the master password for the previously stored passwords, a timeout will trigger that prevents you from entering the master password (default duration: 60 seconds).  
 
 **3. Data File :**
   - Stored in passwords.json.
