@@ -20,22 +20,27 @@ pip install requirements.txt
 
 ## Usage
 
-- To check you password's strength :
+- For help command use **``-help``** :
+```bash
+python cli.py check-age
+```
+
+- To check you password's strength use **``analyze``** :
 ```bash
 python cli.py analyze
 ```
 
-- To store your password :
+- To add or generate a new password use **``new``** :
 ```bash
-python cli.py store
+python cli.py new
 ```
 
-- To retrieve your password :
+- To retrieve your password use **``retrieve``** :
 ```bash
 python cli.py retrieve
 ```
 
-- To check how old are your passwords :
+- To check how old are your passwords use **``check-age``** :
 ```bash
 python cli.py check-age
 ```
