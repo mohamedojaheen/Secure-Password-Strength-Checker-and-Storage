@@ -116,7 +116,7 @@ cd Password_Analyzer
 
 2. Install dependencies :
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Usage
